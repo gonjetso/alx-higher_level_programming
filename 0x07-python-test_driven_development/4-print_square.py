@@ -4,7 +4,7 @@
 
 def print_square(size):
     """Print a square.
-    
+
     Args:
         size (int): The height/width of the square.
     Raises:
