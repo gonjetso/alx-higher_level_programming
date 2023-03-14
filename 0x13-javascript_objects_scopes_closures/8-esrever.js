@@ -1,13 +1,7 @@
 #!/usr/bin/node
 exports.esrever = function (list) {
-  let len = list.length - 1;
-  let x = 0;
-  while ((len - x) > 0) {
-    const aux = list[len];
-    list[len] = list[x];
-    list[x] = aux;
-    x++;
-    len--;
-  }
-  return list;
+  return list.reduceRight(function (array, current) {
+    array.push(current);
+    return array;
+  }, []);
 };
